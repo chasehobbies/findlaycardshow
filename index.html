@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Findlay TCG Card Show | Pokémon, One Piece &amp; More | Findlay, OH</title>
+<meta name="description" content="The Findlay TCG Card Show at the Hancock County Fairgrounds in Findlay, Ohio. Pokémon, One Piece and other TCGs. Free admission, 75 vendor tables, all ages welcome. See all upcoming show dates.">
+<meta name="theme-color" content="#1442D6">
+<link rel="canonical" href="https://www.findlaycardshow.com/">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Findlay TCG Card Show">
+<meta property="og:description" content="Free admission. Pokémon, One Piece &amp; other TCGs. 75 vendor tables. All ages welcome. Hancock County Fairgrounds, Findlay, OH.">
+<meta property="og:url" content="https://www.findlaycardshow.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --blue:#1442D6;
+    --blue-dark:#0E2F9B;
+    --gold:#FFC20E;
+    --ink:#0D0D0F;
+    --paper:#FFFFFF;
+    --grey:#EDEEF0;
+    --muted:#565B63;
+    --shadow:0 6px 0 rgba(13,13,15,1);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Archivo','Helvetica Neue',Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Anton','Archivo','Arial Narrow',Impact,sans-serif;
+    font-weight:400;
+    letter-spacing:.5px;
+    line-height:.95;
+    text-transform:uppercase;
+    margin:0;
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);
+    border-bottom:4px solid var(--gold);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+  .nav-brand{
+    font-family:'Anton',sans-serif;text-transform:uppercase;color:#fff;
+    font-size:20px;letter-spacing:1px;line-height:1;
+  }
+  .nav-brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{
+    color:#fff;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1px;
+  }
+  .nav-links a:hover{color:var(--gold);text-decoration:none}
+  .nav-cta{
+    background:var(--gold);color:var(--ink)!important;padding:9px 16px;border-radius:4px;
+  }
+  .nav-cta:hover{background:#fff}
+  @media(max-width:820px){
+    .nav-links a:not(.nav-cta){display:none}
+    .nav-brand{font-size:16px;max-width:60%}
+    .nav-cta{font-size:12px;padding:8px 12px}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:var(--paper);
+    border-bottom:10px solid var(--blue);
+    padding:60px 0 54px;
+  }
+  .bolt{position:absolute;top:0;bottom:0;width:120px;opacity:1;pointer-events:none}
+  .bolt.left{left:-10px}
+  .bolt.right{right:-10px;transform:scaleX(-1)}
+  @media(max-width:900px){.bolt{display:none}}
+  .hero-inner{position:relative;text-align:center}
+  .logo-lockup{display:inline-block;text-align:center;max-width:100%}
+  .logo-the{
+    font-family:'Anton',sans-serif;font-size:clamp(22px,4.4vw,44px);letter-spacing:6px;
+    color:var(--ink);text-transform:uppercase;
+  }
+  .logo-findlay{
+    font-family:'Anton',sans-serif;font-size:clamp(46px,11vw,118px);color:var(--ink);
+    text-transform:uppercase;letter-spacing:-1px;
+    text-shadow:3px 3px 0 #C9CCD1;
+  }
+  .logo-tcg{
+    font-family:'Anton',sans-serif;font-size:clamp(44px,10vw,108px);color:var(--gold);
+    text-transform:uppercase;letter-spacing:4px;
+    -webkit-text-stroke:3px var(--ink);
+    paint-order:stroke fill;
+    text-shadow:4px 4px 0 rgba(13,13,15,.25);
+  }
+  .logo-show{
+    display:inline-block;margin-top:8px;
+    background:#fff;border:5px solid var(--ink);border-radius:6px;
+    padding:6px 26px;box-shadow:var(--shadow);
+  }
+  .logo-show span{
+    font-family:'Anton',sans-serif;color:var(--blue);
+    font-size:clamp(32px,7.2vw,74px);text-transform:uppercase;letter-spacing:2px;
+  }
+  .tagline{
+    margin:22px auto 0;max-width:640px;
+    font-weight:700;font-size:clamp(15px,2.4vw,21px);letter-spacing:.5px;
+    display:flex;align-items:center;gap:14px;justify-content:center;
+  }
+  .tagline::before,.tagline::after{
+    content:"";height:4px;flex:1;max-width:70px;background:var(--blue);border-radius:2px;
+  }
+  .hero-facts{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;
+  }
+  .chip{
+    background:var(--ink);color:#fff;border-radius:999px;padding:8px 18px;
+    font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;
+  }
+  .chip.gold{background:var(--gold);color:var(--ink)}
+  .chip.blue{background:var(--blue);color:#fff}
+  .hero-buttons{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+
+  .btn{
+    display:inline-block;font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:19px;letter-spacing:1.5px;padding:15px 30px;border-radius:6px;
+    border:4px solid var(--ink);box-shadow:var(--shadow);
+    transition:transform .08s ease, box-shadow .08s ease;
+  }
+  .btn:hover{text-decoration:none;transform:translateY(3px);box-shadow:0 3px 0 var(--ink)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-white{background:#fff;color:var(--ink)}
+
+  /* ---------- Section shell ---------- */
+  section{padding:70px 0}
+  .section-head{text-align:center;margin-bottom:38px}
+  .kicker{
+    display:inline-block;background:var(--blue);color:#fff;
+    font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:3px;
+    font-size:clamp(20px,3.6vw,34px);padding:8px 30px;transform:skewX(-6deg);
+  }
+  .kicker span{display:inline-block;transform:skewX(6deg)}
+  .lede{max-width:660px;margin:18px auto 0;color:var(--muted);font-size:17px}
+
+  /* ---------- Dates ---------- */
+  #dates{background:var(--grey);border-top:6px solid var(--ink);border-bottom:6px solid var(--ink)}
+  .year-label{
+    font-family:'Anton',sans-serif;font-size:26px;letter-spacing:3px;text-transform:uppercase;
+    margin:34px 0 16px;display:flex;align-items:center;gap:14px;
+  }
+  .year-label::after{content:"";flex:1;height:5px;background:var(--ink);border-radius:3px}
+  .date-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .date-card{
+    background:#fff;border:4px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
+    padding:18px 20px;position:relative;overflow:hidden;
+  }
+  .date-card::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:var(--blue);
+  }
+  .date-card:nth-child(even)::before{background:var(--gold)}
+  .date-card.next{background:#FFF8E3;border-color:var(--ink)}
+  .date-card.next::before{background:var(--gold)!important}
+  .date-card.past{opacity:.45}
+  .date-card.past .badge-next{display:none}
+
+  /* ---------- Next-show alert bar ---------- */
+  .alertbar{
+    display:none;background:var(--gold);color:var(--ink);
+    border-bottom:4px solid var(--ink);text-align:center;
+    padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.4px;
+  }
+  .alertbar.show{display:block}
+  .alertbar a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  .alertbar .soon{
+    display:inline-block;background:var(--ink);color:var(--gold);
+    border-radius:999px;padding:2px 11px;margin-right:9px;
+    font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+  }
+  .date-card .dow{
+    font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--muted);
+  }
+  .date-card .md{
+    font-family:'Anton',sans-serif;font-size:clamp(23px,2.1vw,31px);text-transform:uppercase;
+    line-height:1.05;margin:4px 0 6px;white-space:nowrap;letter-spacing:-.5px;
+  }
+  .date-card .hrs{font-weight:700;font-size:15px}
+  .date-card .add{margin-top:12px;display:inline-block;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+  .badge-next{
+    position:absolute;top:0;right:0;background:var(--gold);color:var(--ink);
+    font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+    padding:5px 12px;border-left:4px solid var(--ink);border-bottom:4px solid var(--ink);border-bottom-left-radius:6px;
+  }
+
+  /* ---------- Venue ---------- */
+  .venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  @media(max-width:840px){.venue-grid{grid-template-columns:1fr}}
+  .panel{
+    border:4px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);
+    background:#fff;padding:28px;
+  }
+  .panel h3{font-size:26px;margin-bottom:14px}
+  .panel .addr{font-size:19px;font-weight:700;line-height:1.45}
+  .panel ul{margin:14px 0 0;padding-left:20px}
+  .panel li{margin-bottom:8px}
+  .map-embed{
+    border:4px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);overflow:hidden;
+    min-height:340px;background:var(--grey);
+  }
+  .map-embed iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+
+  /* ---------- Vendors / info strip ---------- */
+  #vendors{background:var(--ink);color:#fff}
+  #vendors .kicker{background:var(--gold);color:var(--ink)}
+  #vendors .lede{color:#C6CBD4}
+  .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:10px}
+  .stat{
+    background:#17181C;border:3px solid var(--gold);border-radius:8px;padding:22px;text-align:center;
+  }
+  .stat .n{font-family:'Anton',sans-serif;font-size:44px;color:var(--gold);line-height:1}
+  .stat .l{font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-top:8px;color:#E6E9EF}
+  .contact-line{
+    text-align:center;margin-top:34px;font-size:19px;font-weight:700;line-height:2;
+  }
+  .contact-line a{color:var(--gold)}
+
+  /* ---------- Follow ---------- */
+  #follow{background:var(--blue);color:#fff}
+  #follow .kicker{background:var(--gold);color:var(--ink)}
+  #follow .lede{color:#DCE4FF}
+  .btn-fb{
+    display:inline-flex;align-items:center;gap:14px;
+    background:#fff;color:var(--ink);
+    border:4px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);
+    padding:18px 36px;
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(20px,3.4vw,28px);letter-spacing:1.5px;
+    transition:transform .08s ease, box-shadow .08s ease, background .12s ease;
+  }
+  .btn-fb svg{width:34px;height:34px;flex:none;color:#1877F2}
+  .btn-fb:hover{
+    text-decoration:none;background:var(--gold);
+    transform:translateY(3px);box-shadow:0 3px 0 var(--ink);
+  }
+  .btn-fb:hover svg{color:var(--ink)}
+  .form-note{margin-top:34px;text-align:center;font-size:14px;color:#DCE4FF}
+  .form-note a{color:var(--gold)}
+
+  /* ---------- Social ---------- */
+  .social-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:6px}
+  .social{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#fff;color:var(--ink);border:4px solid var(--ink);border-radius:6px;
+    box-shadow:var(--shadow);padding:12px 22px;font-weight:800;text-transform:uppercase;
+    letter-spacing:1px;font-size:15px;
+  }
+  .social:hover{text-decoration:none;background:var(--gold)}
+  .social svg{width:20px;height:20px;flex:none}
+
+  /* ---------- FAQ ---------- */
+  details{
+    border:4px solid var(--ink);border-radius:6px;background:#fff;
+    box-shadow:var(--shadow);margin-bottom:14px;
+  }
+  summary{
+    cursor:pointer;padding:18px 22px;font-weight:800;font-size:17px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:'Anton',sans-serif;font-size:26px;color:var(--blue)}
+  details[open] summary::after{content:"–"}
+  details .body{padding:0 22px 20px;color:var(--muted)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#9AA1AC;padding:44px 0;border-top:6px solid var(--gold)}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  footer strong{color:#fff;display:block;font-family:'Anton',sans-serif;letter-spacing:1px;font-size:20px;text-transform:uppercase;margin-bottom:8px}
+  footer a{color:var(--gold)}
+  .copyright{margin-top:30px;font-size:13px;border-top:1px solid #2A2D33;padding-top:18px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="#top">The Findlay <span>TCG</span> Card Show</a>
+    <div class="nav-links">
+      <a href="#dates">Show Dates</a>
+      <a href="#venue">Location</a>
+      <a href="#vendors">Vendors</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#follow">Follow Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="alertbar" id="alertbar" role="status"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <svg class="bolt left" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="70,0 20,270 55,270 10,600 100,250 60,250 110,0" fill="#FFC20E"/>
+  </svg>
+  <svg class="bolt right" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="70,0 20,270 55,270 10,600 100,250 60,250 110,0" fill="#FFC20E"/>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <div class="logo-lockup">
+      <div class="logo-the">The</div>
+      <h1 class="logo-findlay">Findlay</h1>
+      <div class="logo-tcg">TCG</div>
+      <div class="logo-show"><span>Card Show</span></div>
+    </div>
+
+    <p class="tagline">Pokémon, One Piece &amp; Other TCG&rsquo;s</p>
+
+    <div class="hero-facts">
+      <span class="chip blue">Hancock County Fairgrounds</span>
+      <span class="chip">Findlay, Ohio</span>
+      <span class="chip gold">10am &ndash; 3pm</span>
+      <span class="chip gold">Free Admission</span>
+      <span class="chip">All Ages Welcome</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a class="btn btn-blue" href="#dates">See All Show Dates</a>
+      <a class="btn btn-gold" href="#venue">Get Directions</a>
+      <a class="btn btn-white" href="#vendors">Vendor Info</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ DATES ============ -->
+<section id="dates">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span>Show Dates</span></div>
+      <p class="lede">Every show runs <strong>10am&ndash;3pm</strong> at the Hancock County Fairgrounds. <strong>Admission is free</strong> &mdash; come hunt, trade, and grow your collection.</p>
+    </div>
+
+    <div class="year-label">2026</div>
+    <div class="date-grid">
+      <div class="date-card next" data-date="2026-08-16">
+        <div class="badge-next">Next Show</div>
+        <div class="dow">Sunday</div>
+        <div class="md">August 16</div>
+        <div class="hrs">10:00am &ndash; 3:00pm</div>
+        <a class="add" href="#venue">Hancock County Fairgrounds &rarr;</a>
+      </div>
+      <div class="date-card" data-date="2026-10-11">
+        <div class="dow">Sunday</div>
+        <div class="md">October 11</div>
+        <div class="hrs">10:00am &ndash; 3:00pm</div>
+        <a class="add" href="#venue">Hancock County Fairgrounds &rarr;</a>
+      </div>
+    </div>
+
+    <div class="year-label">2027</div>
+    <div class="date-grid">
+      <div class="date-card" data-date="2027-02-21"><div class="dow">Sunday</div><div class="md">February 21</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      <div class="date-card" data-date="2027-04-25"><div class="dow">Sunday</div><div class="md">April 25</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      <div class="date-card" data-date="2027-06-20"><div class="dow">Sunday</div><div class="md">June 20</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      <div class="date-card" data-date="2027-08-15"><div class="dow">Sunday</div><div class="md">August 15</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      <div class="date-card" data-date="2027-10-24"><div class="dow">Sunday</div><div class="md">October 24</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      <div class="date-card" data-date="2027-12-19"><div class="dow">Sunday</div><div class="md">December 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section id="venue">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span>Location &amp; Directions</span></div>
+    </div>
+
+    <div class="venue-grid">
+      <div class="panel">
+        <h3>Hancock County Fairgrounds</h3>
+        <p class="addr">
+          1017 E Sandusky St<br>
+          Findlay, OH 45840
+        </p>
+        <p style="margin-top:18px">
+          <a class="btn btn-blue" style="font-size:16px;padding:12px 22px"
+             href="https://www.google.com/maps/dir/?api=1&destination=1017+E+Sandusky+St%2C+Findlay%2C+OH+45840"
+             target="_blank" rel="noopener">Open in Google Maps</a>
+        </p>
+        <ul>
+          <li><strong>Free parking</strong> on site.</li>
+          <li>Just off <strong>US-224 / E Sandusky St</strong>, about 5 minutes from I-75 (Exit 159).</li>
+          <li>Roughly 45 min from Toledo, 1 hr 15 min from Fort Wayne, 1 hr 45 min from Columbus.</li>
+          <li>Doors open at <strong>10:00am</strong> &mdash; show wraps at <strong>3:00pm</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          title="Map to Hancock County Fairgrounds, 1017 E Sandusky St, Findlay, OH 45840"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=1017+E+Sandusky+St,+Findlay,+OH+45840&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENDORS ============ -->
+<section id="vendors">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span>Vendors Wanted</span></div>
+      <p class="lede">Set up a table and sell to collectors from across Northwest Ohio. Tables go fast &mdash; reach out to reserve yours.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">75</div><div class="l">Vendor Tables</div></div>
+      <div class="stat"><div class="n">$45</div><div class="l">Per Table</div></div>
+      <div class="stat"><div class="n">10&ndash;3</div><div class="l">Show Hours</div></div>
+      <div class="stat"><div class="n">Free</div><div class="l">Admission For All</div></div>
+    </div>
+
+    <p class="contact-line">
+      Contact Chase at <a href="tel:+15672080307">567-208-0307</a><br>
+      Email <a href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request">Info@findlaycardshow.com</a>
+    </p>
+
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-gold" href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request&body=Name%3A%20%0AShow%20date(s)%3A%20%0ANumber%20of%20tables%3A%20%0APhone%3A%20%0AWhat%20you%20sell%3A%20">Request a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOLLOW ============ -->
+<section id="follow">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><span>Never Miss a Show</span></div>
+      <p class="lede">Every date, vendor opening, and announcement goes up on our Facebook page first. Follow it and you&rsquo;ll know before anyone else.</p>
+    </div>
+
+    <div style="text-align:center">
+      <a class="btn-fb" href="https://www.facebook.com/profile.php?id=61591599794646" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+        <span>Follow on Facebook</span>
+      </a>
+    </div>
+
+    <p class="form-note">Or reach us directly &mdash; we answer both.</p>
+
+    <div class="social-row">
+      <a class="social" href="tel:+15672080307">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1l-2.2 2.2Z"/></svg>
+        Call or Text
+      </a>
+      <a class="social" href="mailto:Info@findlaycardshow.com">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.4l-10 6-10-6v-.4Zm0 2.7V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.2l-9.6 5.7a1 1 0 0 1-1 0L2 8.2Z"/></svg>
+        Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="section-head">
+      <div class="kicker"><span>Good to Know</span></div>
+    </div>
+
+    <details open>
+      <summary>What does it cost to get in?</summary>
+      <div class="body"><strong>Nothing &mdash; admission is free.</strong> No ticket, no gate fee. All ages welcome, so bring the whole family.</div>
+    </details>
+    <details>
+      <summary>What kinds of cards will I find?</summary>
+      <div class="body">Pokémon and One Piece are the backbone of the show, alongside other TCGs. Expect singles, sealed product, graded slabs, supplies, and plenty of trading.</div>
+    </details>
+    <details>
+      <summary>How do I get a vendor table?</summary>
+      <div class="body">Tables are $45 each and we run 75 of them. Call or text Chase at <a href="tel:+15672080307">567-208-0307</a>, or email <a href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request">Info@findlaycardshow.com</a> with the show date, how many tables you want, and what you sell.</div>
+    </details>
+    <details>
+      <summary>Is there parking?</summary>
+      <div class="body">Yes &mdash; free parking on site at the Hancock County Fairgrounds, with easy load-in for vendors.</div>
+    </details>
+    <details>
+      <summary>Can I bring cards to sell or trade?</summary>
+      <div class="body">Absolutely. Plenty of vendors buy collections and trade with attendees. Bring your binder.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <strong>The Findlay TCG Card Show</strong>
+        Pokémon, One Piece &amp; Other TCG&rsquo;s<br>
+        All ages welcome.
+      </div>
+      <div>
+        <strong>Where</strong>
+        Hancock County Fairgrounds<br>
+        1017 E Sandusky St<br>
+        Findlay, OH 45840
+      </div>
+      <div>
+        <strong>Contact</strong>
+        Chase &mdash; <a href="tel:+15672080307">567-208-0307</a><br>
+        <a href="mailto:Info@findlaycardshow.com">Info@findlaycardshow.com</a>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <a href="https://www.facebook.com/profile.php?id=61591599794646" target="_blank" rel="noopener">Facebook</a><br>
+        Free admission &mdash; all ages
+      </div>
+    </div>
+    <div class="copyright">&copy; <span id="yr">2026</span> The Findlay Card Show. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Keeps the "Next Show" badge, the alert bar, and past-date dimming correct
+     forever, with no editing. Each .date-card carries data-date="YYYY-MM-DD".
+     A show counts as upcoming until 3:00pm on the day it happens. */
+  (function () {
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.date-card[data-date]'));
+    if (!cards.length) return;
+
+    var now = new Date();
+    var upcoming = null;
+
+    cards.forEach(function (card) {
+      var p = card.getAttribute('data-date').split('-');
+      var end = new Date(+p[0], +p[1] - 1, +p[2], 15, 0, 0); // 3pm local, show over
+      card.classList.remove('next');
+      var badge = card.querySelector('.badge-next');
+      if (badge) badge.remove();
+
+      if (end < now) {
+        card.classList.add('past');
+      } else if (!upcoming) {
+        upcoming = { card: card, date: new Date(+p[0], +p[1] - 1, +p[2]) };
+      }
+    });
+
+    if (!upcoming) return;
+
+    upcoming.card.classList.add('next');
+    var b = document.createElement('div');
+    b.className = 'badge-next';
+    b.textContent = 'Next Show';
+    upcoming.card.insertBefore(b, upcoming.card.firstChild);
+
+    // Alert bar: only within 30 days of the next show
+    var days = Math.ceil((upcoming.date - now) / 86400000);
+    if (days > 30) return;
+
+    var pretty = upcoming.date.toLocaleDateString('en-US', {
+      weekday: 'long', month: 'long', day: 'numeric'
+    });
+    var when = days <= 0 ? 'Today' : days === 1 ? 'Tomorrow' : 'In ' + days + ' days';
+
+    var bar = document.getElementById('alertbar');
+    var lead = days <= 0 ? 'Happening now' : 'Next show';
+    bar.innerHTML =
+      '<span class="soon">' + when + '</span>' +
+      lead + ': <strong>' + pretty + '</strong>, 10am–3pm at the Hancock County Fairgrounds — ' +
+      'free admission. <a href="#venue">Get directions</a>';
+    bar.classList.add('show');
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  "name": "The Findlay TCG Card Show",
+  "description": "Free-admission Pokémon, One Piece and other TCG card show at the Hancock County Fairgrounds in Findlay, Ohio.",
+  "url": "https://www.findlaycardshow.com/",
+  "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1017 E Sandusky St",
+      "addressLocality": "Findlay",
+      "addressRegion": "OH",
+      "postalCode": "45840",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "The Findlay Card Show",
+    "email": "Info@findlaycardshow.com",
+    "telephone": "+1-567-208-0307",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61591599794646"]
+  },
+  "subEvent": [
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2026-08-16T10:00:00-04:00","endDate":"2026-08-16T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2026-10-11T10:00:00-04:00","endDate":"2026-10-11T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-02-21T10:00:00-05:00","endDate":"2027-02-21T15:00:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-04-25T10:00:00-04:00","endDate":"2027-04-25T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-06-20T10:00:00-04:00","endDate":"2027-06-20T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-08-15T10:00:00-04:00","endDate":"2027-08-15T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-10-24T10:00:00-04:00","endDate":"2027-10-24T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
+    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-12-19T10:00:00-05:00","endDate":"2027-12-19T15:00:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}}
+  ]
+}
+</script>
+
+</body>
+</html>
