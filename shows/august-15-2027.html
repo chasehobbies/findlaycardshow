@@ -149,13 +149,33 @@
       <div class="kicker"><span>Details &amp; Booth Booking</span></div>
       <p class="lede">Browse the floor map, see who&rsquo;s exhibiting, and reserve your table for this date.</p>
     </div>
-      <div class="notice">
-        <h3>Booking Opens Soon</h3>
-        <p>Online booth booking for this date isn&rsquo;t live yet. Call or text Chase at
-        <a href="tel:+15672080307">567-208-0307</a> or email
-        <a href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request">Info@findlaycardshow.com</a>
-        to reserve a table in the meantime.</p>
+      <div class="embed-frame">
+        <iframe
+          id="hobbyhub-embed-6a8b5567f9796a79e40ce637"
+          src="https://hobbyhub.pro/embed/show/6a8b5567f9796a79e40ce637?layout=full"
+          width="100%"
+          height="1200"
+          frameborder="0"
+          loading="lazy"
+          scrolling="no"
+          title="The Findlay Pokemon and TCG Card Show"
+          style="border:0;width:100%;"
+        ></iframe>
       </div>
+      <p class="embed-fallback">
+        Panel not loading? Open it directly on
+        <a href="https://hobbyhub.pro/showdetails?id=6a8b5567f9796a79e40ce637" target="_blank" rel="noopener">HobbyHub</a>.
+      </p>
+
+      <script>
+        window.addEventListener("message", function (e) {
+          if (e.origin !== "https://hobbyhub.pro") return;
+          if (e.data && e.data.type === "hobbyhub_embed_resize" && typeof e.data.height === "number") {
+            var f = document.getElementById("hobbyhub-embed-6a8b5567f9796a79e40ce637");
+            if (f) f.style.height = e.data.height + "px";
+          }
+        });
+      </script>
   </div>
 </section>
 
