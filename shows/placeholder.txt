@@ -1,0 +1,1 @@
+Individual show pages live in this folder, one per show date.
