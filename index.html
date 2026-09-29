@@ -183,9 +183,22 @@
   .year-label::after{content:"";flex:1;height:4px;background:var(--grey);border-radius:2px}
   .date-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(242px,1fr));gap:14px}
   .date-card{
+    display:block;color:inherit;text-decoration:none;
     background:#fff;border:4px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
-    padding:16px 18px;position:relative;overflow:hidden;
+    padding:16px 18px 38px;position:relative;overflow:hidden;
+    transition:transform .08s ease, box-shadow .08s ease;
   }
+  .date-card::after{
+    content:"View details \2192";
+    position:absolute;left:18px;bottom:13px;
+    font-weight:800;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;
+    color:var(--blue);
+  }
+  .series--collect .date-card::after{color:#B07E00}
+  .date-card:hover{
+    text-decoration:none;transform:translateY(3px);box-shadow:0 3px 0 var(--ink);
+  }
+  .date-card:focus-visible{outline:4px solid var(--gold);outline-offset:3px}
   .date-card::before{
     content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:var(--blue);
   }
@@ -358,11 +371,11 @@
 
       <div class="year-label">2027</div>
       <div class="date-grid">
-        <div class="date-card" data-date="2027-01-17" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">January 17</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-03-28" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">March 28</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-07-11" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">July 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-09-19" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">September 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-11-14" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">November 14</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <a class="date-card" href="/shows/january-17-2027.html" data-date="2027-01-17" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">January 17</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/march-28-2027.html" data-date="2027-03-28" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">March 28</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/july-11-2027.html" data-date="2027-07-11" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">July 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/september-19-2027.html" data-date="2027-09-19" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">September 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/november-14-2027.html" data-date="2027-11-14" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">November 14</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
       </div>
     </div>
 
@@ -376,17 +389,17 @@
 
       <div class="year-label">2026</div>
       <div class="date-grid">
-        <div class="date-card" data-date="2026-10-11" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <a class="date-card" href="/shows/october-11-2026.html" data-date="2026-10-11" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
       </div>
 
       <div class="year-label">2027</div>
       <div class="date-grid">
-        <div class="date-card" data-date="2027-02-21" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">February 21</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-04-25" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">April 25</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-06-20" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">June 20</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-08-15" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">August 15</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-10-24" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 24</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-        <div class="date-card" data-date="2027-12-19" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">December 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <a class="date-card" href="/shows/february-21-2027.html" data-date="2027-02-21" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">February 21</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/april-25-2027.html" data-date="2027-04-25" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">April 25</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/june-20-2027.html" data-date="2027-06-20" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">June 20</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/august-15-2027.html" data-date="2027-08-15" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">August 15</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/october-24-2027.html" data-date="2027-10-24" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 24</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
+        <a class="date-card" href="/shows/december-19-2027.html" data-date="2027-12-19" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">December 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></a>
       </div>
     </div>
   </div>
