@@ -3,18 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Findlay TCG Card Show | Pokémon, One Piece &amp; More | Findlay, OH</title>
-<meta name="description" content="The Findlay TCG Card Show at the Hancock County Fairgrounds in Findlay, Ohio. Pokémon, One Piece and other TCGs. Free admission, 75 vendor tables, all ages welcome. See all upcoming show dates.">
+<title>The Findlay Card Show | Card &amp; Collectibles and TCG Shows | Findlay, OH</title>
+<meta name="description" content="The Findlay Card Show at the Hancock County Fairgrounds in Findlay, Ohio. Two show series: Card &amp; Collectibles (sports cards, comics, toys) and TCG (Pokémon, One Piece). Free admission, 75 vendor tables, all ages welcome.">
 <meta name="theme-color" content="#1442D6">
 <link rel="canonical" href="https://www.findlaycardshow.com/">
 
 <!-- Social sharing -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Findlay TCG Card Show">
-<meta property="og:description" content="Free admission. Pokémon, One Piece &amp; other TCGs. 75 vendor tables. All ages welcome. Hancock County Fairgrounds, Findlay, OH.">
+<meta property="og:title" content="The Findlay Card Show">
+<meta property="og:description" content="Free admission. Two show series — Card &amp; Collectibles and TCG. 75 vendor tables. All ages welcome. Hancock County Fairgrounds, Findlay, OH.">
 <meta property="og:url" content="https://www.findlaycardshow.com/">
+<meta property="og:image" content="https://www.findlaycardshow.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
@@ -52,6 +54,7 @@
   }
   a{color:var(--blue);text-decoration:none}
   a:hover{text-decoration:underline}
+  img{max-width:100%;height:auto}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
@@ -82,55 +85,42 @@
     .nav-cta{font-size:12px;padding:8px 12px}
   }
 
+  /* ---------- Next-show alert bar ---------- */
+  .alertbar{
+    display:none;background:var(--gold);color:var(--ink);
+    border-bottom:4px solid var(--ink);text-align:center;
+    padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.4px;
+  }
+  .alertbar.show{display:block}
+  .alertbar a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  .alertbar .soon{
+    display:inline-block;background:var(--ink);color:var(--gold);
+    border-radius:999px;padding:2px 11px;margin-right:9px;
+    font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+  }
+
   /* ---------- Hero ---------- */
   .hero{
     position:relative;overflow:hidden;
     background:var(--paper);
     border-bottom:10px solid var(--blue);
-    padding:60px 0 54px;
+    padding:54px 0 50px;
   }
-  .bolt{position:absolute;top:0;bottom:0;width:120px;opacity:1;pointer-events:none}
+  .bolt{position:absolute;top:0;bottom:0;width:120px;pointer-events:none}
   .bolt.left{left:-10px}
   .bolt.right{right:-10px;transform:scaleX(-1)}
   @media(max-width:900px){.bolt{display:none}}
   .hero-inner{position:relative;text-align:center}
-  .logo-lockup{display:inline-block;text-align:center;max-width:100%}
-  .logo-the{
-    font-family:'Anton',sans-serif;font-size:clamp(22px,4.4vw,44px);letter-spacing:6px;
-    color:var(--ink);text-transform:uppercase;
-  }
-  .logo-findlay{
-    font-family:'Anton',sans-serif;font-size:clamp(46px,11vw,118px);color:var(--ink);
-    text-transform:uppercase;letter-spacing:-1px;
-    text-shadow:3px 3px 0 #C9CCD1;
-  }
-  .logo-tcg{
-    font-family:'Anton',sans-serif;font-size:clamp(44px,10vw,108px);color:var(--gold);
-    text-transform:uppercase;letter-spacing:4px;
-    -webkit-text-stroke:3px var(--ink);
-    paint-order:stroke fill;
-    text-shadow:4px 4px 0 rgba(13,13,15,.25);
-  }
-  .logo-show{
-    display:inline-block;margin-top:8px;
-    background:#fff;border:5px solid var(--ink);border-radius:6px;
-    padding:6px 26px;box-shadow:var(--shadow);
-  }
-  .logo-show span{
-    font-family:'Anton',sans-serif;color:var(--blue);
-    font-size:clamp(32px,7.2vw,74px);text-transform:uppercase;letter-spacing:2px;
-  }
+  .hero-logo{width:min(640px,88%);display:block;margin:0 auto}
   .tagline{
-    margin:22px auto 0;max-width:640px;
-    font-weight:700;font-size:clamp(15px,2.4vw,21px);letter-spacing:.5px;
+    margin:24px auto 0;max-width:720px;
+    font-weight:700;font-size:clamp(15px,2.4vw,21px);letter-spacing:.3px;
     display:flex;align-items:center;gap:14px;justify-content:center;
   }
   .tagline::before,.tagline::after{
     content:"";height:4px;flex:1;max-width:70px;background:var(--blue);border-radius:2px;
   }
-  .hero-facts{
-    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;
-  }
+  .hero-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
   .chip{
     background:var(--ink);color:#fff;border-radius:999px;padding:8px 18px;
     font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;
@@ -159,55 +149,68 @@
     font-size:clamp(20px,3.6vw,34px);padding:8px 30px;transform:skewX(-6deg);
   }
   .kicker span{display:inline-block;transform:skewX(6deg)}
-  .lede{max-width:660px;margin:18px auto 0;color:var(--muted);font-size:17px}
+  .lede{max-width:680px;margin:18px auto 0;color:var(--muted);font-size:17px}
 
-  /* ---------- Dates ---------- */
+  /* ---------- Show series ---------- */
   #dates{background:var(--grey);border-top:6px solid var(--ink);border-bottom:6px solid var(--ink)}
-  .year-label{
-    font-family:'Anton',sans-serif;font-size:26px;letter-spacing:3px;text-transform:uppercase;
-    margin:34px 0 16px;display:flex;align-items:center;gap:14px;
+  .series{
+    background:#fff;border:5px solid var(--ink);border-radius:10px;
+    box-shadow:0 8px 0 var(--ink);
+    padding:30px 26px 32px;margin-bottom:46px;
   }
-  .year-label::after{content:"";flex:1;height:5px;background:var(--ink);border-radius:3px}
-  .date-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .series:last-child{margin-bottom:0}
+  .series-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;
+    padding-bottom:18px;margin-bottom:22px;border-bottom:4px solid var(--ink);
+  }
+  .series-name{font-size:clamp(25px,4.2vw,38px);line-height:1}
+  .series-name .accent{color:var(--blue)}
+  .series--collect .series-name .accent{color:#C28A00}
+  .series-sub{
+    font-weight:800;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;
+    color:#fff;background:var(--blue);padding:6px 14px;border-radius:999px;
+  }
+  .series--collect .series-sub{background:var(--gold);color:var(--ink)}
+  .series-note{
+    width:100%;margin:0;color:var(--muted);font-size:15.5px;
+  }
+
+  .year-label{
+    font-family:'Anton',sans-serif;font-size:21px;letter-spacing:3px;text-transform:uppercase;
+    margin:26px 0 14px;display:flex;align-items:center;gap:14px;color:var(--muted);
+  }
+  .year-label:first-of-type{margin-top:0}
+  .year-label::after{content:"";flex:1;height:4px;background:var(--grey);border-radius:2px}
+  .date-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(242px,1fr));gap:14px}
   .date-card{
     background:#fff;border:4px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
-    padding:18px 20px;position:relative;overflow:hidden;
+    padding:16px 18px;position:relative;overflow:hidden;
   }
   .date-card::before{
     content:"";position:absolute;left:0;top:0;bottom:0;width:9px;background:var(--blue);
   }
-  .date-card:nth-child(even)::before{background:var(--gold)}
-  .date-card.next{background:#FFF8E3;border-color:var(--ink)}
-  .date-card.next::before{background:var(--gold)!important}
-  .date-card.past{opacity:.45}
-  .date-card.past .badge-next{display:none}
-
-  /* ---------- Next-show alert bar ---------- */
-  .alertbar{
-    display:none;background:var(--gold);color:var(--ink);
-    border-bottom:4px solid var(--ink);text-align:center;
-    padding:11px 18px;font-weight:800;font-size:15px;letter-spacing:.4px;
-  }
-  .alertbar.show{display:block}
-  .alertbar a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
-  .alertbar .soon{
-    display:inline-block;background:var(--ink);color:var(--gold);
-    border-radius:999px;padding:2px 11px;margin-right:9px;
-    font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
-  }
+  .series--collect .date-card::before{background:var(--gold)}
+  .date-card.next{background:#FFF8E3}
+  .date-card.next::before{background:var(--gold)}
+  .series--collect .date-card.next::before{background:var(--blue)}
+  .date-card.past{opacity:.4}
   .date-card .dow{
     font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--muted);
   }
   .date-card .md{
-    font-family:'Anton',sans-serif;font-size:clamp(23px,2.1vw,31px);text-transform:uppercase;
+    font-family:'Anton',sans-serif;font-size:clamp(21px,1.95vw,29px);text-transform:uppercase;
     line-height:1.05;margin:4px 0 6px;white-space:nowrap;letter-spacing:-.5px;
   }
-  .date-card .hrs{font-weight:700;font-size:15px}
-  .date-card .add{margin-top:12px;display:inline-block;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+  .date-card .hrs{font-weight:700;font-size:14.5px}
   .badge-next{
     position:absolute;top:0;right:0;background:var(--gold);color:var(--ink);
     font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
-    padding:5px 12px;border-left:4px solid var(--ink);border-bottom:4px solid var(--ink);border-bottom-left-radius:6px;
+    padding:5px 12px;border-left:4px solid var(--ink);border-bottom:4px solid var(--ink);
+    border-bottom-left-radius:6px;
+  }
+  .all-past{
+    margin:14px 0 0;padding:14px 16px;background:var(--grey);border-radius:6px;
+    color:var(--muted);font-size:15px;
   }
 
   /* ---------- Venue ---------- */
@@ -227,19 +230,15 @@
   }
   .map-embed iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
 
-  /* ---------- Vendors / info strip ---------- */
+  /* ---------- Vendors ---------- */
   #vendors{background:var(--ink);color:#fff}
   #vendors .kicker{background:var(--gold);color:var(--ink)}
   #vendors .lede{color:#C6CBD4}
   .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:10px}
-  .stat{
-    background:#17181C;border:3px solid var(--gold);border-radius:8px;padding:22px;text-align:center;
-  }
+  .stat{background:#17181C;border:3px solid var(--gold);border-radius:8px;padding:22px;text-align:center}
   .stat .n{font-family:'Anton',sans-serif;font-size:44px;color:var(--gold);line-height:1}
   .stat .l{font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;margin-top:8px;color:#E6E9EF}
-  .contact-line{
-    text-align:center;margin-top:34px;font-size:19px;font-weight:700;line-height:2;
-  }
+  .contact-line{text-align:center;margin-top:34px;font-size:19px;font-weight:700;line-height:2}
   .contact-line a{color:var(--gold)}
 
   /* ---------- Follow ---------- */
@@ -262,9 +261,6 @@
   }
   .btn-fb:hover svg{color:var(--ink)}
   .form-note{margin-top:34px;text-align:center;font-size:14px;color:#DCE4FF}
-  .form-note a{color:var(--gold)}
-
-  /* ---------- Social ---------- */
   .social-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:6px}
   .social{
     display:inline-flex;align-items:center;gap:10px;
@@ -301,7 +297,7 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a class="nav-brand" href="#top">The Findlay <span>TCG</span> Card Show</a>
+    <a class="nav-brand" href="#top">The Findlay <span>Card</span> Show</a>
     <div class="nav-links">
       <a href="#dates">Show Dates</a>
       <a href="#venue">Location</a>
@@ -324,19 +320,14 @@
   </svg>
 
   <div class="wrap hero-inner">
-    <div class="logo-lockup">
-      <div class="logo-the">The</div>
-      <h1 class="logo-findlay">Findlay</h1>
-      <div class="logo-tcg">TCG</div>
-      <div class="logo-show"><span>Card Show</span></div>
-    </div>
+    <h1 class="sr-only">The Findlay Card Show</h1>
+    <img class="hero-logo" src="logo.png" alt="The Findlay Card Show" width="900" height="559" fetchpriority="high">
 
-    <p class="tagline">Pokémon, One Piece &amp; Other TCG&rsquo;s</p>
+    <p class="tagline">Two Shows. One Fairgrounds. Findlay, Ohio.</p>
 
     <div class="hero-facts">
       <span class="chip blue">Hancock County Fairgrounds</span>
-      <span class="chip">Findlay, Ohio</span>
-      <span class="chip gold">10am &ndash; 3pm</span>
+      <span class="chip">10am &ndash; 3pm</span>
       <span class="chip gold">Free Admission</span>
       <span class="chip">All Ages Welcome</span>
     </div>
@@ -354,34 +345,49 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span>Show Dates</span></div>
-      <p class="lede">Every show runs <strong>10am&ndash;3pm</strong> at the Hancock County Fairgrounds. <strong>Admission is free</strong> &mdash; come hunt, trade, and grow your collection.</p>
+      <p class="lede">We run <strong>two different shows</strong> at the Hancock County Fairgrounds. Both are <strong>10am&ndash;3pm</strong> with <strong>free admission</strong> and all ages welcome.</p>
     </div>
 
-    <div class="year-label">2026</div>
-    <div class="date-grid">
-      <div class="date-card next" data-date="2026-08-16">
-        <div class="badge-next">Next Show</div>
-        <div class="dow">Sunday</div>
-        <div class="md">August 16</div>
-        <div class="hrs">10:00am &ndash; 3:00pm</div>
-        <a class="add" href="#venue">Hancock County Fairgrounds &rarr;</a>
+    <!-- ---- Series 1: Card & Collectibles ---- -->
+    <div class="series series--collect">
+      <div class="series-head">
+        <h2 class="series-name">The Findlay <span class="accent">Card &amp; Collectibles</span> Show</h2>
+        <span class="series-sub">Sports Cards, TCG, Comics, Toys &amp; More</span>
+        <p class="series-note">Our widest show &mdash; sports cards and graded slabs alongside TCG, comics, toys, memorabilia and collectibles of every kind.</p>
       </div>
-      <div class="date-card" data-date="2026-10-11">
-        <div class="dow">Sunday</div>
-        <div class="md">October 11</div>
-        <div class="hrs">10:00am &ndash; 3:00pm</div>
-        <a class="add" href="#venue">Hancock County Fairgrounds &rarr;</a>
+
+      <div class="year-label">2027</div>
+      <div class="date-grid">
+        <div class="date-card" data-date="2027-01-17" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">January 17</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-03-28" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">March 28</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-07-11" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">July 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-09-19" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">September 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-11-14" data-show="Card &amp; Collectibles Show"><div class="dow">Sunday</div><div class="md">November 14</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
       </div>
     </div>
 
-    <div class="year-label">2027</div>
-    <div class="date-grid">
-      <div class="date-card" data-date="2027-02-21"><div class="dow">Sunday</div><div class="md">February 21</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-      <div class="date-card" data-date="2027-04-25"><div class="dow">Sunday</div><div class="md">April 25</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-      <div class="date-card" data-date="2027-06-20"><div class="dow">Sunday</div><div class="md">June 20</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-      <div class="date-card" data-date="2027-08-15"><div class="dow">Sunday</div><div class="md">August 15</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-      <div class="date-card" data-date="2027-10-24"><div class="dow">Sunday</div><div class="md">October 24</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
-      <div class="date-card" data-date="2027-12-19"><div class="dow">Sunday</div><div class="md">December 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+    <!-- ---- Series 2: TCG ---- -->
+    <div class="series series--tcg">
+      <div class="series-head">
+        <h2 class="series-name">The Findlay <span class="accent">TCG</span> Card Show</h2>
+        <span class="series-sub">Pokémon, One Piece &amp; Other TCG&rsquo;s</span>
+        <p class="series-note">Trading card games front and center &mdash; singles, sealed product, graded slabs, supplies and plenty of trading.</p>
+      </div>
+
+      <div class="year-label">2026</div>
+      <div class="date-grid">
+        <div class="date-card" data-date="2026-10-11" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 11</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      </div>
+
+      <div class="year-label">2027</div>
+      <div class="date-grid">
+        <div class="date-card" data-date="2027-02-21" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">February 21</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-04-25" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">April 25</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-06-20" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">June 20</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-08-15" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">August 15</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-10-24" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">October 24</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+        <div class="date-card" data-date="2027-12-19" data-show="TCG Card Show"><div class="dow">Sunday</div><div class="md">December 19</div><div class="hrs">10:00am &ndash; 3:00pm</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -391,6 +397,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span>Location &amp; Directions</span></div>
+      <p class="lede">Both shows run at the same place, same hours.</p>
     </div>
 
     <div class="venue-grid">
@@ -409,7 +416,7 @@
           <li><strong>Free parking</strong> on site.</li>
           <li>Just off <strong>US-224 / E Sandusky St</strong>, about 5 minutes from I-75 (Exit 159).</li>
           <li>Roughly 45 min from Toledo, 1 hr 15 min from Fort Wayne, 1 hr 45 min from Columbus.</li>
-          <li>Doors open at <strong>10:00am</strong> &mdash; show wraps at <strong>3:00pm</strong>.</li>
+          <li>Doors open at <strong>10:00am</strong> &mdash; shows wrap at <strong>3:00pm</strong>.</li>
         </ul>
       </div>
 
@@ -429,7 +436,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span>Vendors Wanted</span></div>
-      <p class="lede">Set up a table and sell to collectors from across Northwest Ohio. Tables go fast &mdash; reach out to reserve yours.</p>
+      <p class="lede">Tables are available at <strong>both</strong> the Card &amp; Collectibles Show and the TCG Show. Sell to collectors from across Northwest Ohio &mdash; tables go fast, so reach out to reserve yours.</p>
     </div>
 
     <div class="stat-row">
@@ -445,7 +452,7 @@
     </p>
 
     <div style="text-align:center;margin-top:26px">
-      <a class="btn btn-gold" href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request&body=Name%3A%20%0AShow%20date(s)%3A%20%0ANumber%20of%20tables%3A%20%0APhone%3A%20%0AWhat%20you%20sell%3A%20">Request a Table</a>
+      <a class="btn btn-gold" href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request&body=Name%3A%20%0AWhich%20show%20(Card%20%26%20Collectibles%20or%20TCG)%3A%20%0AShow%20date(s)%3A%20%0ANumber%20of%20tables%3A%20%0APhone%3A%20%0AWhat%20you%20sell%3A%20">Request a Table</a>
     </div>
   </div>
 </section>
@@ -455,7 +462,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="kicker"><span>Never Miss a Show</span></div>
-      <p class="lede">Every date, vendor opening, and announcement goes up on our Facebook page first. Follow it and you&rsquo;ll know before anyone else.</p>
+      <p class="lede">Every date, vendor opening, and announcement for both shows goes up on our Facebook page first. Follow it and you&rsquo;ll know before anyone else.</p>
     </div>
 
     <div style="text-align:center">
@@ -488,16 +495,16 @@
     </div>
 
     <details open>
-      <summary>What does it cost to get in?</summary>
-      <div class="body"><strong>Nothing &mdash; admission is free.</strong> No ticket, no gate fee. All ages welcome, so bring the whole family.</div>
+      <summary>What&rsquo;s the difference between the two shows?</summary>
+      <div class="body">The <strong>Card &amp; Collectibles Show</strong> is the wider one &mdash; sports cards, TCG, comics, toys, memorabilia and collectibles of every kind. The <strong>TCG Card Show</strong> focuses on trading card games, mainly Pokémon and One Piece. Same venue, same hours, same free admission.</div>
     </details>
     <details>
-      <summary>What kinds of cards will I find?</summary>
-      <div class="body">Pokémon and One Piece are the backbone of the show, alongside other TCGs. Expect singles, sealed product, graded slabs, supplies, and plenty of trading.</div>
+      <summary>What does it cost to get in?</summary>
+      <div class="body"><strong>Nothing &mdash; admission is free</strong> at both shows. No ticket, no gate fee. All ages welcome, so bring the whole family.</div>
     </details>
     <details>
       <summary>How do I get a vendor table?</summary>
-      <div class="body">Tables are $45 each and we run 75 of them. Call or text Chase at <a href="tel:+15672080307">567-208-0307</a>, or email <a href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request">Info@findlaycardshow.com</a> with the show date, how many tables you want, and what you sell.</div>
+      <div class="body">Tables are $45 each and we run 75 of them at each show. Call or text Chase at <a href="tel:+15672080307">567-208-0307</a>, or email <a href="mailto:Info@findlaycardshow.com?subject=Vendor%20Table%20Request">Info@findlaycardshow.com</a> with which show you want, the date, how many tables, and what you sell.</div>
     </details>
     <details>
       <summary>Is there parking?</summary>
@@ -515,9 +522,10 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <strong>The Findlay TCG Card Show</strong>
-        Pokémon, One Piece &amp; Other TCG&rsquo;s<br>
-        All ages welcome.
+        <strong>The Findlay Card Show</strong>
+        Card &amp; Collectibles Show<br>
+        TCG Card Show<br>
+        Free admission &mdash; all ages.
       </div>
       <div>
         <strong>Where</strong>
@@ -533,7 +541,7 @@
       <div>
         <strong>Follow</strong>
         <a href="https://www.facebook.com/profile.php?id=61591599794646" target="_blank" rel="noopener">Facebook</a><br>
-        Free admission &mdash; all ages
+        10am &ndash; 3pm, every show
       </div>
     </div>
     <div class="copyright">&copy; <span id="yr">2026</span> The Findlay Card Show. All rights reserved.</div>
@@ -544,8 +552,9 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   /* Keeps the "Next Show" badge, the alert bar, and past-date dimming correct
-     forever, with no editing. Each .date-card carries data-date="YYYY-MM-DD".
-     A show counts as upcoming until 3:00pm on the day it happens. */
+     forever, with no editing. Each .date-card carries data-date="YYYY-MM-DD"
+     and data-show="<series name>". A show counts as upcoming until 3:00pm on
+     the day it happens. Works across both show series. */
   (function () {
     var cards = Array.prototype.slice.call(document.querySelectorAll('.date-card[data-date]'));
     if (!cards.length) return;
@@ -556,24 +565,44 @@
     cards.forEach(function (card) {
       var p = card.getAttribute('data-date').split('-');
       var end = new Date(+p[0], +p[1] - 1, +p[2], 15, 0, 0); // 3pm local, show over
-      card.classList.remove('next');
-      var badge = card.querySelector('.badge-next');
-      if (badge) badge.remove();
+      card.classList.remove('next', 'past');
+      var old = card.querySelector('.badge-next');
+      if (old) old.remove();
 
       if (end < now) {
         card.classList.add('past');
-      } else if (!upcoming) {
-        upcoming = { card: card, date: new Date(+p[0], +p[1] - 1, +p[2]) };
+        return;
+      }
+      var d = new Date(+p[0], +p[1] - 1, +p[2]);
+      if (!upcoming || d < upcoming.date) {
+        upcoming = { card: card, date: d, show: card.getAttribute('data-show') || '' };
+      }
+    });
+
+    // Highlight each series' own next date, so both series read clearly
+    document.querySelectorAll('.series').forEach(function (series) {
+      var next = series.querySelector('.date-card[data-date]:not(.past)');
+      if (!next) return;
+      next.classList.add('next');
+      var b = document.createElement('div');
+      b.className = 'badge-next';
+      b.textContent = (upcoming && next === upcoming.card) ? 'Next Show' : 'Next Date';
+      next.insertBefore(b, next.firstChild);
+    });
+
+    // Note any series whose dates have all passed
+    document.querySelectorAll('.series').forEach(function (s) {
+      var all = s.querySelectorAll('.date-card[data-date]');
+      var past = s.querySelectorAll('.date-card.past');
+      if (all.length && all.length === past.length && !s.querySelector('.all-past')) {
+        var p = document.createElement('p');
+        p.className = 'all-past';
+        p.textContent = 'New dates for this show are announced on our Facebook page.';
+        s.appendChild(p);
       }
     });
 
     if (!upcoming) return;
-
-    upcoming.card.classList.add('next');
-    var b = document.createElement('div');
-    b.className = 'badge-next';
-    b.textContent = 'Next Show';
-    upcoming.card.insertBefore(b, upcoming.card.firstChild);
 
     // Alert bar: only within 30 days of the next show
     var days = Math.ceil((upcoming.date - now) / 86400000);
@@ -583,12 +612,13 @@
       weekday: 'long', month: 'long', day: 'numeric'
     });
     var when = days <= 0 ? 'Today' : days === 1 ? 'Tomorrow' : 'In ' + days + ' days';
+    var lead = days <= 0 ? 'Happening now' : 'Next up';
+    var name = upcoming.show ? upcoming.show + ' — ' : '';
 
     var bar = document.getElementById('alertbar');
-    var lead = days <= 0 ? 'Happening now' : 'Next show';
     bar.innerHTML =
       '<span class="soon">' + when + '</span>' +
-      lead + ': <strong>' + pretty + '</strong>, 10am–3pm at the Hancock County Fairgrounds — ' +
+      lead + ': <strong>' + name + pretty + '</strong>, 10am–3pm at the Hancock County Fairgrounds — ' +
       'free admission. <a href="#venue">Get directions</a>';
     bar.classList.add('show');
   })();
@@ -597,39 +627,419 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EventSeries",
-  "name": "The Findlay TCG Card Show",
-  "description": "Free-admission Pokémon, One Piece and other TCG card show at the Hancock County Fairgrounds in Findlay, Ohio.",
+  "@type": "Organization",
+  "name": "The Findlay Card Show",
+  "description": "Free-admission card and collectibles shows at the Hancock County Fairgrounds in Findlay, Ohio.",
   "url": "https://www.findlaycardshow.com/",
-  "location": {
+  "logo": "https://www.findlaycardshow.com/logo.png",
+  "email": "Info@findlaycardshow.com",
+  "telephone": "+1-567-208-0307",
+  "sameAs": ["https://www.facebook.com/profile.php?id=61591599794646"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1017 E Sandusky St",
+    "addressLocality": "Findlay",
+    "addressRegion": "OH",
+    "postalCode": "45840",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "EventSeries",
+ "name": "The Findlay Card & Collectibles Show",
+ "description": "Sports cards, TCG, comics, toys and collectibles. Free admission, all ages welcome.",
+ "url": "https://www.findlaycardshow.com/",
+ "location": {
+  "@type": "Place",
+  "name": "Hancock County Fairgrounds",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "1017 E Sandusky St",
+   "addressLocality": "Findlay",
+   "addressRegion": "OH",
+   "postalCode": "45840",
+   "addressCountry": "US"
+  }
+ },
+ "organizer": {
+  "@type": "Organization",
+  "name": "The Findlay Card Show",
+  "email": "Info@findlaycardshow.com",
+  "telephone": "+1-567-208-0307",
+  "url": "https://www.findlaycardshow.com/"
+ },
+ "subEvent": [
+  {
+   "@type": "Event",
+   "name": "The Findlay Card & Collectibles Show",
+   "startDate": "2027-01-17T10:00:00-05:00",
+   "endDate": "2027-01-17T15:00:00-05:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
     "@type": "Place",
     "name": "Hancock County Fairgrounds",
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1017 E Sandusky St",
-      "addressLocality": "Findlay",
-      "addressRegion": "OH",
-      "postalCode": "45840",
-      "addressCountry": "US"
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
     }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
   },
-  "organizer": {
-    "@type": "Organization",
-    "name": "The Findlay Card Show",
-    "email": "Info@findlaycardshow.com",
-    "telephone": "+1-567-208-0307",
-    "sameAs": ["https://www.facebook.com/profile.php?id=61591599794646"]
+  {
+   "@type": "Event",
+   "name": "The Findlay Card & Collectibles Show",
+   "startDate": "2027-03-28T10:00:00-04:00",
+   "endDate": "2027-03-28T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
   },
-  "subEvent": [
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2026-08-16T10:00:00-04:00","endDate":"2026-08-16T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2026-10-11T10:00:00-04:00","endDate":"2026-10-11T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-02-21T10:00:00-05:00","endDate":"2027-02-21T15:00:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-04-25T10:00:00-04:00","endDate":"2027-04-25T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-06-20T10:00:00-04:00","endDate":"2027-06-20T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-08-15T10:00:00-04:00","endDate":"2027-08-15T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-10-24T10:00:00-04:00","endDate":"2027-10-24T15:00:00-04:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}},
-    {"@type":"Event","name":"The Findlay TCG Card Show","startDate":"2027-12-19T10:00:00-05:00","endDate":"2027-12-19T15:00:00-05:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Hancock County Fairgrounds","address":"1017 E Sandusky St, Findlay, OH 45840"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://www.findlaycardshow.com/","validFrom":"2026-08-13"}}
-  ]
+  {
+   "@type": "Event",
+   "name": "The Findlay Card & Collectibles Show",
+   "startDate": "2027-07-11T10:00:00-04:00",
+   "endDate": "2027-07-11T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay Card & Collectibles Show",
+   "startDate": "2027-09-19T10:00:00-04:00",
+   "endDate": "2027-09-19T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay Card & Collectibles Show",
+   "startDate": "2027-11-14T10:00:00-05:00",
+   "endDate": "2027-11-14T15:00:00-05:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "EventSeries",
+ "name": "The Findlay TCG Card Show",
+ "description": "Pokémon, One Piece and other trading card games. Free admission, all ages welcome.",
+ "url": "https://www.findlaycardshow.com/",
+ "location": {
+  "@type": "Place",
+  "name": "Hancock County Fairgrounds",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "1017 E Sandusky St",
+   "addressLocality": "Findlay",
+   "addressRegion": "OH",
+   "postalCode": "45840",
+   "addressCountry": "US"
+  }
+ },
+ "organizer": {
+  "@type": "Organization",
+  "name": "The Findlay Card Show",
+  "email": "Info@findlaycardshow.com",
+  "telephone": "+1-567-208-0307",
+  "url": "https://www.findlaycardshow.com/"
+ },
+ "subEvent": [
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2026-10-11T10:00:00-04:00",
+   "endDate": "2026-10-11T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-02-21T10:00:00-05:00",
+   "endDate": "2027-02-21T15:00:00-05:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-04-25T10:00:00-04:00",
+   "endDate": "2027-04-25T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-06-20T10:00:00-04:00",
+   "endDate": "2027-06-20T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-08-15T10:00:00-04:00",
+   "endDate": "2027-08-15T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-10-24T10:00:00-04:00",
+   "endDate": "2027-10-24T15:00:00-04:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  },
+  {
+   "@type": "Event",
+   "name": "The Findlay TCG Card Show",
+   "startDate": "2027-12-19T10:00:00-05:00",
+   "endDate": "2027-12-19T15:00:00-05:00",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "Place",
+    "name": "Hancock County Fairgrounds",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "1017 E Sandusky St",
+     "addressLocality": "Findlay",
+     "addressRegion": "OH",
+     "postalCode": "45840",
+     "addressCountry": "US"
+    }
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.findlaycardshow.com/",
+    "validFrom": "2026-09-29"
+   }
+  }
+ ]
 }
 </script>
 
